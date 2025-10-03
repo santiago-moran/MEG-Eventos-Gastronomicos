@@ -334,11 +334,6 @@ h1, h2, h3 {
     text-transform: none;
     border-top: solid 1px #eee;
     padding-top: 15px;
-    transition: scale .5s;
-}
-.options__option li:hover {
-    scale: 1.05;
-    font-weight: 700;
 }
 .catering__modal:has(.card-check:checked) {
     display: flex;
