@@ -17,6 +17,9 @@ p {
     padding: 10px 20px;
     font-size: 14px;
 }
+main {
+    min-height: 100dvh;
+}
 
 /*--- NAVBAR ---*/
 
@@ -155,7 +158,7 @@ button a:hover, .card__btn:hover {
 /*--- ABOUT ---*/
 
 .about {
-    min-height: 100dvh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -195,7 +198,7 @@ button a:hover, .card__btn:hover {
 /*--- CATERING ---*/
 
 .catering {
-    min-height: 100dvh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -471,7 +474,4 @@ footer i {
     .navbar-items__item a:hover {
         background-color: #eee8;
     }
-    /* .navbar-items__item {
-        width: 100%;
-    } */
 }
