@@ -159,10 +159,11 @@ button a:hover, .card__btn:hover {
 /*--- ABOUT ---*/
 
 .about {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 .about__img {
     width: 100%;
@@ -181,7 +182,7 @@ button a:hover, .card__btn:hover {
     padding: 0;
 }
 .about__strong-text {
-    font-size: 25px;
+    font-size: clamp(18px, 4vw, 25px);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -199,13 +200,15 @@ button a:hover, .card__btn:hover {
 /*--- CATERING ---*/
 
 .catering {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 60px 0;
 }
 .catering h2 {
     margin-top: 40px;
+    text-align: center;
 }
 .catering__cards {
     display: flex;
