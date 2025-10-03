@@ -17,9 +17,6 @@ p {
     padding: 10px 20px;
     font-size: 14px;
 }
-main {
-    min-height: 100dvh;
-}
 
 /*--- NAVBAR ---*/
 
@@ -350,8 +347,10 @@ h1, h2, h3 {
 
 .contact {
     position: fixed;
-    top: 750px;
+    top: 90%;
     right: 30px;
+    width: min-content;
+    height: min-content;
 }
 .contact__logo {
     color: #000;
