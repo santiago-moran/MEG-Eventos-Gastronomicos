@@ -188,7 +188,7 @@ button a:hover, .card__btn:hover {
     letter-spacing: 2px;
     text-align: center;
 }
-.about__btn {
+.about__btn, .modal__btn {
     width: 100%;
     display: flex;
     justify-content: center;
