@@ -145,14 +145,14 @@ h2 {
 button {
     background-color: transparent;
     border: none;
-    border: solid 1px;
+    border: solid .5px;
     margin-top: 30px;
 }
 button a, .card__btn {
     padding: 10px 20px;
     transition: background-color .5s;
 }
-button a:hover, .card__btn:hover {
+button a:hover, .card__btn:hover, .modal__btn button:hover {
     background-color: var(--principal-color);
 }
 
@@ -297,7 +297,7 @@ h1, h2, h3 {
     height: 600px;
     overflow-y: auto;
     box-shadow: 0 0 10px #888;
-    padding: 10px 0px 35px 0px;
+    padding: 10px 0px 20px 0px;
     color: #000;
     position: relative;
     display: none;
@@ -350,6 +350,18 @@ h1, h2, h3 {
 }
 .modal__card-modal:has(#card-check:checked), .modal__card-modal:has(#card-check2:checked), .modal__card-modal:has(#card-check3:checked), .modal__card-modal:has(#card-check4:checked) {
     display: block;
+}
+.modal__btn {
+    position: sticky;
+    bottom: -30px;
+    height: 80px;
+    align-items: center;
+    background-color: #fff;
+}
+.modal__btn button {
+    margin: 0;
+    height: 40px;
+    transition: background-color .5s;
 }
 
 /*--- CONTACT ---*/
