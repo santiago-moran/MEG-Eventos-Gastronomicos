@@ -361,6 +361,7 @@ h1, h2, h3 {
     width: 100%;
     text-align: right;
     background-color: #fff;
+    z-index: 10;
 }
 .card-modal__options {
     padding: 0 15px;
