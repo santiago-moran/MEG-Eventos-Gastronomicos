@@ -263,7 +263,7 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
     flex-wrap: wrap;
 }
 .cards__card {
-    animation-range-end: 70%;
+    animation-range-end: 60%;
     width: 100%;
     max-width: 250px;
     height: 350px;
