@@ -196,6 +196,8 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
 .about {
     min-height: 100%;
     text-align: center;
+    background-color: #ddd4;
+    padding: 30px 0;
 }
 .about__img {
     width: 100%;
@@ -243,8 +245,9 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
 }
 .catering {
     min-height: 100%;
-    margin: 100px 0 50px 0;
+    padding: 30px 0;
     animation-range-end: 65%;
+    background-color: #ddd7;
 }
 .catering h2 {
     text-align: center;
@@ -261,6 +264,7 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
     text-align: center;
     padding-bottom: 15px;
     margin: 15px;
+    background-color: #fffa;
 }
 .card__img {
     width: 100%;
