@@ -373,7 +373,7 @@ h1, h2, h3 {
 
 .contact {
     position: fixed;
-    top: 87%;
+    bottom: 70px;
     right: 30px;
     width: min-content;
     height: min-content;
