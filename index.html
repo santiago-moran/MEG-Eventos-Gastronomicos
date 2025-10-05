@@ -21,11 +21,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar flex-row-spcBtwn">
             <div class="navbar__logo">
                 <img src="images/meg-logo.png" alt="Logo de la empresa">
             </div>
-            <div>
+            <div class="navbar__menu">
                 <input type="checkbox" id="menu-check" class="menu-check">
                 <label for="menu-check">
                     <span class="material-symbols-outlined open-menu">menu</span>
@@ -34,7 +34,7 @@
                     <label for="menu-check">
                         <span class="material-symbols-outlined close-menu">close_small</span>
                     </label>
-                    <ul class="navbar-items">
+                    <ul class="navbar-items flex-col-spcEvly">
                         <li class="navbar-items__item">
                             <a href="#home" >Inicio</a>
                         </li>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </nav>
-        <section class="home" id="home">
+        <section class="home flex-colRev-cnt" id="home">
             <div class="home__text">
                 <h1>Organizamos tus Eventos Gastronomicos</h1>
                 <h2>Asesorias | Eventos | Cursos</h2>
@@ -59,7 +59,7 @@
         </section>
     </header>
     <main>
-        <section id="about" class="about">
+        <section id="about" class="about flex-col-cnt">
             <h2>Lider del Equipo</h2>
             <div class="about__content">
                 <div class="about__img">
@@ -71,7 +71,7 @@
                         <p class="text">Actualmente soy dueño y fundador de la <strong>gran empresa de catering: MEG</strong>, ademas de asesorar cocinas profesionales. Por eso, puedo asegurarte una cosa:</p>
                         <p class="about__strong-text">En MEG, tenes todo resuelto</p>
                     </div>
-                    <div class="about__btn">
+                    <div class="about__btn flex-row-cnt">
                         <button>
                             <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20consultar%20por%20el%20servicio%20de%20Catering%20que%20brindan%20en%20MEG.
                             " target="_blank">Reservar</a>
@@ -80,16 +80,16 @@
                 </div>
             </div>
         </section>
-        <section id="catering" class="catering">
+        <section id="catering" class="catering flex-col-cnt">
             <h2>Catering</h2>
-            <div class="catering__cards">
-                <div class="cards__card">
+            <div class="catering__cards flex-row-spcEvly">
+                <div class="cards__card flex-col-spcBtwn">
                     <div class="card__img">
                         <img src="images/imagen-card-1.jpg" alt="">
                     </div>
-                    <div class="card__options">
+                    <div class="card__options flex-col-spcBtwn">
                         <h3>Opciones Cocktail</h3>
-                        <ul>
+                        <ul class="flex-col-spcEvly">
                             <li>Pinchos</li>
                             <li>Brusquetas</li>
                             <li>Finger Foods</li>
@@ -99,13 +99,13 @@
                         </button>
                     </div>
                 </div>
-                <div class="cards__card">
+                <div class="cards__card flex-col-spcBtwn">
                     <div class="card__img">
                         <img src="images/imagen-card-2.jpg" alt="">
                     </div>
-                    <div class="card__options">
+                    <div class="card__options flex-col-spcBtwn">
                         <h3>Islas Tematicas</h3>
-                        <ul>
+                        <ul class="flex-col-spcEvly">
                             <li>Mexicana</li>
                             <li>Italiana</li>
                             <li>Oriental</li>
@@ -117,13 +117,13 @@
                         </button>
                     </div>
                 </div>
-                <div class="cards__card">
+                <div class="cards__card flex-col-spcBtwn">
                     <div class="card__img">
                         <img src="images/imagen-card-3.jpg" alt="">
                     </div>
-                    <div class="card__options">
+                    <div class="card__options flex-col-spcBtwn">
                         <h3>Dulces Tentaciones</h3>
-                        <ul>
+                        <ul class="flex-col-spcEvly">
                             <li>Dulces en Bandejeo</li>
                             <li>Mesa Dulce</li>
                         </ul>
@@ -132,13 +132,13 @@
                         </button>
                     </div>
                 </div>
-                <div class="cards__card">
+                <div class="cards__card flex-col-spcBtwn">
                     <div class="card__img">
                         <img src="images/imagen-card-4.jpg" alt="">
                     </div>
-                    <div class="card__options">
+                    <div class="card__options flex-col-spcBtwn">
                         <h3>Opciones de Tres Pasos</h3>
-                        <ul>
+                        <ul class="flex-col-spcEvly">
                             <li>Entrada</li>
                             <li>Principal</li>
                             <li>Postre</li>
@@ -198,7 +198,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="modal__btn">
+                    <div class="modal__btn flex-row-cnt">
                         <button>
                             <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Opciones%20Cocktail%20del%20servicio%20de%20Catering%20de%20MEG.
                             " target="_blank">Reservar</a>
@@ -272,7 +272,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="modal__btn">
+                    <div class="modal__btn flex-row-cnt">
                         <button>
                             <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Islas%20Temáticas%20del%20servicio%20de%20Catering%20de%20MEG.
                             " target="_blank">Reservar</a>
@@ -310,7 +310,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="modal__btn">
+                    <div class="modal__btn flex-row-cnt">
                         <button>
                             <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Dulces%20Tentaciones%20del%20servicio%20de%20Catering%20de%20MEG.
                             " target="_blank">Reservar</a>
@@ -374,7 +374,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="modal__btn">
+                    <div class="modal__btn flex-row-cnt">
                         <button>
                             <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Opciones%20de%20Tres%20Pasos%20del%20servicio%20de%20Catering%20de%20MEG.
                             " target="_blank">Reservar</a>
@@ -390,7 +390,7 @@
             </a>
         </section>
     </main>
-    <footer>
+    <footer class="flex-row-cnt">
         <p>MEG - Eventos Gastronomicos</p>
         <a href="https://www.instagram.com/megeventosgastronomicos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram de MEG">
             <i class="fa-brands fa-instagram"></i>
