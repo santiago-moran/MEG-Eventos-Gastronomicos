@@ -135,6 +135,7 @@ h2 {
     font-size: clamp(12px, 3vw, 18px);
     letter-spacing: 7px;
     padding: 0;
+    margin-bottom: 20px;
 }
 .home h2:nth-of-type(2) {
     font-size: clamp(10px, 2vw, 15px);
