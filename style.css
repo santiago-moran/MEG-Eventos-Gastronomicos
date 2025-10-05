@@ -106,7 +106,7 @@ main {
     animation: opacity 1s 1 both linear;
 }
 .home__img {
-    background-image: url(images/imagen-principal.png);
+    background-image: url(images/imagen-principal.jpg);
     width: 100%;
     height: 320px;
     background-size: cover;
