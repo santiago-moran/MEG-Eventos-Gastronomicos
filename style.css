@@ -68,8 +68,6 @@ main {
     z-index: 10;
     animation: navbar-animation 1 both;
     animation-timeline: scroll();
-    /* animation-range-start: 100px;
-    animation-range-end: 200px; */
     animation-range-start: 5%;
     animation-range-end: 15%;
 }
@@ -90,6 +88,12 @@ main {
 }
 .open-menu {
     cursor: pointer;
+    font-size: 30px;
+    transition: background .5s;
+    padding: 2px;
+}
+.open-menu:hover {
+    background-color: #eee;
 }
 .items-container {
     height: 100vh;
