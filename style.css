@@ -156,7 +156,7 @@ main {
 
 .home {
     text-align: center;
-    height: calc(800px + 60px);
+    height: clamp(200px, 100vh, 2000px);
     animation: opacity 1s 1 both linear;
 }
 .home__img {
