@@ -342,7 +342,7 @@ h1, h2, h3 {
     height: 600px;
     overflow-y: auto;
     box-shadow: 0 0 10px #888;
-    padding: 10px 0px 20px 0px;
+    padding-bottom: 0;
     color: #000;
     position: relative;
     display: none;
@@ -362,7 +362,7 @@ h1, h2, h3 {
 }
 .close-modal {
     position: sticky;
-    top: -10px;
+    top: 0;
     margin: 0px 0 20px 0;
     padding: 5px;
     width: 100%;
@@ -374,10 +374,10 @@ h1, h2, h3 {
     padding: 0 15px;
 }
 .options__option, .options__option ul li {
-    animation: opacity;
+    animation: opacity both;
     animation-timeline: view();
-    animation-range-start: cover 0;
-    animation-range-end: cover 60%;
+    animation-range-start: cover 5%;
+    animation-range-end: cover 35%;
 }
 .options__option h4{
     font-weight: 600;
@@ -408,7 +408,7 @@ h1, h2, h3 {
 }
 .modal__btn {
     position: sticky;
-    bottom: -30px;
+    bottom: 0;
     height: 80px;
     align-items: center;
     background-color: #fff;
