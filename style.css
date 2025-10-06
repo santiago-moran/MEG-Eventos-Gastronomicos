@@ -136,6 +136,21 @@ main {
 .navbar:has(.menu-check:checked) .items-container {
     transform: translateX(0);
 }
+.navbar:has(.menu-check:checked) .close-menu-tchScreen {
+    visibility: visible;
+    opacity: 1;
+}
+.close-menu-tchScreen {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+}
 
 /*---HOME---*/
 
@@ -387,6 +402,9 @@ h1, h2, h3 {
 }
 .modal__card-modal:has(#card-check:checked), .modal__card-modal:has(#card-check2:checked), .modal__card-modal:has(#card-check3:checked), .modal__card-modal:has(#card-check4:checked) {
     display: block;
+}
+.catering__modal:has(#card-check:checked) .modal-close1, .catering__modal:has(#card-check2:checked) .modal-close2, .catering__modal:has(#card-check3:checked) .modal-close3, .catering__modal:has(#card-check4:checked) .modal-close4 {
+    visibility: visible;
 }
 .modal__btn {
     position: sticky;
