@@ -19,7 +19,7 @@ p {
     font-size: 14px;
 }
 main {
-    min-height: 100dvh;
+    min-height: 50dvh;
 }
 
 /* --- GENERAL CLASSES --- */
@@ -244,16 +244,9 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
 
 /*--- CATERING ---*/
 
-.about, .cards__card, .catering h2 {
-    animation: opacity both;
-    animation-timeline: view();
-    animation-range-start: cover 0;
-    animation-range-end: cover 80%;
-}
 .catering {
     min-height: 100%;
     padding: 30px 0;
-    animation-range-end: 65%;
     background-color: #ddd6;
 }
 .catering h2 {
@@ -263,7 +256,6 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
     flex-wrap: wrap;
 }
 .cards__card {
-    animation-range-end: 60%;
     width: 100%;
     max-width: 250px;
     height: 350px;
@@ -468,7 +460,6 @@ footer i {
 @keyframes navbar-animation {
     100% {
         height: 30px;
-        /* backdrop-filter: blur(3px); */
     }
 }
 
