@@ -156,7 +156,7 @@ main {
 
 .home {
     text-align: center;
-    min-height: 100vh;
+    height: calc(800px + 60px);
     animation: opacity 1s 1 both linear;
 }
 .home__img {
@@ -211,6 +211,9 @@ button a, .card__btn {
 button a:hover, .card__btn:hover, .modal__btn button:hover {
     background-color: var(--principal-color);
     color: #fff;
+}
+.home button {
+    margin-bottom: 30px;
 }
 
 /*--- ABOUT ---*/
