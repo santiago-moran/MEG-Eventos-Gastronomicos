@@ -58,7 +58,8 @@ main {
 /*--- NAVBAR ---*/
 
 .navbar {
-    background-color: #fffd;
+    background-color: #0005;
+    color: var(--principal-color);
     align-items: center;
     height: 60px;
     padding: 0 20px;
@@ -66,10 +67,10 @@ main {
     width: 100%;
     top: 0;
     z-index: 10;
-    animation: navbar-animation 1 both;
-    animation-timeline: scroll();
-    animation-range-start: 5%;
-    animation-range-end: 15%;
+    animation: navbar-height-animation 1 both, navbar-color-animation 1 both;
+    animation-timeline: scroll(), scroll();
+    animation-range-start: 10vh, 50vh;
+    animation-range-end: 35vh, 60vh;
 }
 .navbar__logo {
     width: 40px;
@@ -89,11 +90,11 @@ main {
 .open-menu {
     cursor: pointer;
     font-size: 30px;
-    transition: background .5s;
+    transition: opacity .5s;
     padding: 2px;
 }
 .open-menu:hover {
-    background-color: #eee;
+    opacity: .5;
 }
 .items-container {
     height: 100vh;
@@ -103,15 +104,23 @@ main {
     right: 0;
     transform: translateX(150px);
     transition: transform .5s;
-    background-color: #fff;
+    background-color: #000b;
     font-size: 11px;
     text-align: center;
+    animation: navMenu-bckg 1 both;
+    animation-timeline: scroll();
+    animation-range-start: 50vh;
+    animation-range-end: 60vh;
 }
 .close-menu {
     position: absolute;
     right: 120px;
     cursor: pointer;
     margin-top: 20px;
+    transition: opacity .5s;
+}
+.close-menu:hover {
+    opacity: .5;
 }
 .navbar-items {
     list-style: none;
@@ -128,10 +137,11 @@ main {
     padding: 5px;
 }
 .navbar-items__item a {
-    transition: background-color .5s;
+    transition: opacity .5s;
+    color: inherit;
 }
 .navbar-items__item a:hover {
-    background-color: #eee8;
+    opacity: .5;
 }
 .navbar:has(.menu-check:checked) .items-container {
     transform: translateX(0);
@@ -139,12 +149,12 @@ main {
 .navbar:has(.menu-check:checked) .close-menu-tchScreen {
     visibility: visible;
     opacity: 1;
+    backdrop-filter: blur(4px);
 }
 .close-menu-tchScreen {
     position: fixed;
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(2px);
     left: 0;
     top: 0;
     visibility: hidden;
@@ -156,16 +166,23 @@ main {
 
 .home {
     text-align: center;
-    height: clamp(200px, 100vh, 2000px);
+    height: clamp(200px, calc(100vh + 60px), 2000px);
     animation: opacity 1s 1 both linear;
-}
-.home__img {
-    background-image: url(images/imagen-principal.webp);
-    width: 100%;
-    height: 320px;
+    position: relative;
+    background: url(images/imagen-principal.webp);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
+}
+.home__text {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#fff9, #000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 h1, h2, .home h2:nth-of-type(2) {
     font-weight: 600;
@@ -207,12 +224,14 @@ button a, .card__btn {
     padding: 10px 20px;
     transition: background-color .5s, color .5s;
 }
-button a:hover, .card__btn:hover, .modal__btn button:hover {
+button a:hover, .card__btn:hover {
     background-color: var(--principal-color);
     color: #fff;
 }
 .home button {
     margin-bottom: 30px;
+    width: max-content;
+    border-width: 1px;
 }
 
 /*--- ABOUT ---*/
@@ -220,17 +239,19 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
 .about {
     min-height: 100%;
     text-align: center;
-    background-color: #ddd4;
+    background: linear-gradient(to bottom, transparent 10%, #ddd4 90%);
     padding: 30px 0;
 }
 .about__img {
     width: 100%;
     height: 320px;
+    padding: 0 20px;
 }
 .about__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: left;
 }
 .about__text {
     padding: 10px 20px;
@@ -280,6 +301,10 @@ button a:hover, .card__btn:hover, .modal__btn button:hover {
     text-align: center;
     padding-bottom: 15px;
     margin: 15px;
+    transition: scale .5s;
+}
+.cards__card:hover {
+    scale: 1.03;
 }
 .card__img {
     width: 100%;
@@ -333,7 +358,7 @@ h1, h2, h3 {
     top: 0;
     height: 100dvh;
     width: 100%;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
     z-index: 10;
     display: none;
 }
@@ -417,10 +442,7 @@ h1, h2, h3 {
 }
 .modal__btn button {
     margin: 0;
-    height: 40px;
-    transition: background-color .5s;
 }
-
 /*--- CONTACT ---*/
 
 .contact {
@@ -433,7 +455,7 @@ h1, h2, h3 {
 .contact__logo {
     color: #000;
     font-size: 35px;
-    color: #78b33c;
+    color: var(--principal-color);
 }
 .contact__logo i {
     transition: transform .5s;
@@ -458,10 +480,10 @@ footer a {
     color: #000;
     margin-left: 15px;
     padding: 10px;
-    transition: background-color .5s;
+    transition: opacity .5s;
 }
 footer a:hover {
-    background-color: #ddd6;
+    opacity: .5;;
 }
 footer i {
     font-size: 20px;
@@ -477,9 +499,20 @@ footer i {
         opacity: 1;
     }
 }
-@keyframes navbar-animation {
+@keyframes navbar-height-animation {
     100% {
-        height: 30px;
+        height: 35px;
+    }
+}
+@keyframes navbar-color-animation {
+    100% {
+        background-color: #fffb;
+        color: #000;
+    }
+}
+@keyframes navMenu-bckg {
+    100% {
+        background-color: #fffd;
     }
 }
 
@@ -487,7 +520,7 @@ footer i {
 
 @media screen and (min-width: 750px) {
 
-    /*--- ABOUT --- */
+        /*--- ABOUT --- */
 
     .about {
         align-items: center;
@@ -497,14 +530,21 @@ footer i {
         flex-direction: row;
         width: 90%;
         height: 600px;
+        justify-content: center;
     }
     .about__img {
         max-width: 600px;
+        width: clamp(200px, 50%, 600px);
         height: 100%;
         box-shadow: 0 0 10px;
+        transition: scale .5s;
+        padding: 0;
+    }
+    .about__img:hover {
+        scale: 1.01;
     }
     .content__text {
-        width: 80%;
+        width: clamp(200px, 50%, 500px);
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -519,9 +559,6 @@ footer i {
 
     /* --- NAVBAR --- */
 
-    .navbar {
-        backdrop-filter: blur(2px);
-    }
     .open-menu {
         display: none;
     }
@@ -535,13 +572,11 @@ footer i {
         transform: translateX(0);
         transition: none;
         background-color: transparent;
+        animation: none;
     }
     .navbar-items {
         flex-direction: row;
         justify-content: space-evenly;
         height: 100%;
-    }
-    .navbar-items__item a:hover {
-        background-color: #eee8;
     }
 }
