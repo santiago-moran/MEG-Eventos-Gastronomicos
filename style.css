@@ -5,7 +5,7 @@ html {
     scroll-behavior: smooth;
 }
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -191,6 +191,7 @@ h1 {
     font-size: clamp(14px, 6vw, 22px);
     margin: 30px 0 20px 0;
     letter-spacing: 10px;
+    line-height: 1.6;
 }
 h2 {
     margin-bottom: 50px;
@@ -239,13 +240,16 @@ button a:hover, .card__btn:hover {
 .about {
     min-height: 100%;
     text-align: center;
-    background: linear-gradient(to bottom, transparent 10%, #ddd4 90%);
+    background: linear-gradient(to bottom, transparent 10%, #ccc7 90%);
     padding: 30px 0;
+}
+.about__content {
+    margin: 15px 0;
 }
 .about__img {
     width: 100%;
     height: 320px;
-    padding: 0 20px;
+    padding: 0 5px;
 }
 .about__img img {
     width: 100%;
@@ -259,7 +263,7 @@ button a:hover, .card__btn:hover {
 }
 .text{
     font-size: 12.5px;
-    font-size: clamp(14px, 1.7vw, 18px);
+    font-size: clamp(16px, 2vw, 20px);
     padding: 0;
     letter-spacing: 1px;
     line-height: 1.6;
@@ -269,15 +273,16 @@ button a:hover, .card__btn:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 5px;
-    padding-left: 0;
+    padding: 0;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    line-height: 1.6;
 }
 .about__btn, .modal__btn {
     width: 100%;
 }
 .about__btn button {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /*--- CATERING ---*/
@@ -285,7 +290,7 @@ button a:hover, .card__btn:hover {
 .catering {
     min-height: 100%;
     padding: 30px 0;
-    background-color: #ddd6;
+    background-color: #ccc9;
 }
 .catering h2 {
     text-align: center;
@@ -297,11 +302,15 @@ button a:hover, .card__btn:hover {
     width: 100%;
     max-width: 250px;
     height: 350px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #0005;
     text-align: center;
     padding-bottom: 15px;
     margin: 15px;
     transition: scale .5s;
+    background-color: #fff4;
+}
+.cards__card h3 {
+    line-height: 1.3;
 }
 .cards__card:hover {
     scale: 1.03;
@@ -327,7 +336,7 @@ h3 {
 }
 .cards__card ul {
     list-style: none;
-    font-size: 13px;
+    font-size: 15px;
     height: 150px;
 }
 .cards__card li {
@@ -413,13 +422,14 @@ h1, h2, h3 {
 }
 .options__option ul {
     list-style: none;
-    font-size: 12px;
+    font-size: 14px;
 }
 .options__option li {
     margin: 15px 0;
     text-transform: none;
     border-top: solid 1px #eee;
     padding-top: 15px;
+    line-height: 1.6;
 }
 .catering__modal:has(.card-check:checked) {
     display: flex;
@@ -468,7 +478,7 @@ h1, h2, h3 {
 /*--- FOOTER --- */
 
 footer {
-    background-color: #eee6;
+    background-color: #bbb8;
     align-items: center;
     padding: 5px 0;
 }
