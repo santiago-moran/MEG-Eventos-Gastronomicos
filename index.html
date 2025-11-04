@@ -3,405 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="En MEG tenes todo resuelto. Ofrecemos servicios de catering gourmet, calidad premium y atencion profesional. No te preocupes mas, dejalo en nuestras manos.">
-    <meta name="keywords" content="catering, eventos, gastronomia, chef, comida, gourmet, cocina, calidad, MEG, Buenos Aires, postres, mesa dulce">
-    <meta name="author" content="MEG - Eventos Gastronomicos">
-    <meta property="og:title" content="MEG - Eventos Gastronomicos">
-    <meta property="og:description" content="Catering de calidad para todos tus eventos.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://santiago-moran.github.io/MEG-Eventos-Gastronomicos/images/meg-logo.webp">
-    <script src="https://kit.fontawesome.com/79a487990f.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/79a487990f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>MEG - Eventos Gastronomicos</title>
 </head>
 <body>
     <header>
-        <nav class="navbar flex-row-spcBtwn">
-            <div class="navbar__logo">
-                <img src="images/meg-logo.webp" alt="Logo de la empresa">
+        <nav class="navBar">
+            <div class="navBar__logo">
+                <a href="#">
+                    <img src="images/meg-logo.webp" alt="Logo de la empresa">
+                </a>
             </div>
-            <div class="navbar__menu">
-                <input type="checkbox" id="menu-check" class="menu-check">
-                <label for="menu-check" class="close-menu-tchScreen"></label>
-                <label for="menu-check">
-                    <span class="material-symbols-outlined open-menu">menu</span>
+            <div class="navBar__menu">
+                <input type="checkbox" id="menu-checker" class="menu__menu-checker" aria-hidden="true">
+                <label for="menu-checker">
+                    <i class="fa-solid fa-bars menu__open-menu"></i>
                 </label>
-                <div class="items-container">
-                    <label for="menu-check">
-                        <span class="material-symbols-outlined close-menu">close_small</span>
-                    </label>
-                    <ul class="navbar-items flex-col-spcEvly">
-                        <li class="navbar-items__item">
-                            <a href="#home" >Inicio</a>
-                        </li>
-                        <li class="navbar-items__item">
-                            <a href="#about">Historia</a>
-                        </li>
-                        <li class="navbar-items__item">
-                            <a href="#catering">Catering</a>
-                        </li>
-                    </ul>
-                </div>
+                <label for="menu-checker">
+                    <i class="fa-solid fa-xmark menu__close-menu"></i>
+                </label>
+                <ul class="menu__items">
+                    <li class="items__item"><a href="">Inicio</a></li>
+                    <li class="items__item"><a href="">Servicios</a></li>
+                    <li class="items__item"><a href="">Catering</a></li>
+                    <li class="items__item"><a href="">Historia</a></li>
+                    <li class="items__item"><a href="">Contacto</a></li>
+                </ul>
             </div>
         </nav>
-        <section class="home flex-colRev-cnt" id="home">
-            <div class="home__text">
-                <h1>Organizamos tus Eventos Gastronomicos</h1>
-                <h2>Asesorias | Eventos | Cursos</h2>
-                <h2>Desde 1996</h2>
-                <button><a href="#about">Conoce Mas</a></button>
-            </div>
-        </section>
     </header>
     <main>
-        <section id="about" class="about flex-col-cnt">
-            <h2>Lider del Equipo</h2>
-            <div class="about__content">
-                <div class="about__img">
-                    <img src="images/imagen-about.webp" alt="Equipo de MEG">
+        <section class="home">
+            <h1>EVENTOS GASTRONOMICOS DE EXCELENCIA</h1>
+            <p>Creamos experiencias culinarias memorables para sus eventos mas importantes</p>
+            <button class="home__contact-btn">
+                <a href="#">CONTACTAR</a>
+            </button>
+        </section>
+        <section class="services section">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-description">Ofrecemos servicios de catering personalizado para todo tipo de eventos, combinando calidad, elegancia y atencion al detalle.</p>
+            <div class="services__images">
+                <div class="images__image">
+                    <img src="images/imagen-principal.webp" alt="Imagen de un evento de MEG">
                 </div>
-                <div class="content__text">
-                    <div class="about__text">
-                        <p class="text">Mi nombre es Ignacio Moran, estoy en el rubro Gastronomico hace mas de 20 años. Realice la apertura del Casino de Tigre a cargo del gran Norberto Niemetsheck. Luego migre hacia el Costa Galana, en Mar del Plata, como Sous Chef Ejecutivo. Posteriormente, volvi a Bs As, al Jokey Club, como Chef Ejecutivo y finalmente pase al Hipodromo de Palermo.</p>
-                        <p class="text">Actualmente soy dueño y fundador de la <strong>empresa de catering: MEG</strong>, ademas de asesorar cocinas profesionales. Por eso, puedo asegurarte una cosa:</p>
-                        <p class="about__strong-text">En MEG, tenes todo resuelto</p>
-                    </div>
-                    <div class="about__btn flex-row-cnt">
-                        <button>
-                            <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20consultar%20por%20el%20servicio%20de%20Catering%20que%20brindan%20en%20MEG.
-                            " target="_blank">Reservar</a>
-                        </button>
-                    </div>
+                <div class="images__image">
+                    <img src="images/imagen-about.webp" alt="Imagen de un evento de MEG">
+                </div>
+            </div>
+            <div class="services__cards">
+                <div class="cards__card">
+                    <h3>Eventos Corporativos</h3>
+                    <p class="card__description">Servicios de catering profesional para reuniones de negocios, conferencias y eventos corporativos.</p>
+                </div>
+                <div class="cards__card">
+                    <h3>Bodas y Celebraciones</h3>
+                    <p class="card__description">Menus personalizados para bodas, aniversarios y celebraciones especiales con atencion al detalle.</p>
+                </div>
+                <div class="cards__card">
+                    <h3>Eventos Privados</h3>
+                    <p class="card__description">Experiencias gastronomicas exclusivas para cenas privadas y reuniones intimas.</p>
                 </div>
             </div>
         </section>
-        <section id="catering" class="catering flex-col-cnt">
-            <h2>Catering</h2>
-            <div class="catering__cards flex-row-spcEvly">
-                <div class="cards__card flex-col-spcBtwn">
-                    <div class="card__img">
-                        <img src="images/imagen-card-1.webp" alt="">
-                    </div>
-                    <div class="card__options flex-col-spcBtwn">
-                        <h3>Opciones Cocktail</h3>
-                        <ul class="flex-col-spcEvly">
-                            <li>Pinchos</li>
-                            <li>Brusquetas</li>
-                            <li>Finger Foods</li>
-                        </ul>
-                        <button class="card__btn">
-                            <label for="card-check">Ver Mas</label>
-                        </button>
-                    </div>
-                </div>
-                <div class="cards__card flex-col-spcBtwn">
-                    <div class="card__img">
-                        <img src="images/imagen-card-2.webp" alt="">
-                    </div>
-                    <div class="card__options flex-col-spcBtwn">
-                        <h3>Islas Tematicas</h3>
-                        <ul class="flex-col-spcEvly">
-                            <li>Mexicana</li>
-                            <li>Italiana</li>
-                            <li>Oriental</li>
-                            <li>Del Mar</li>
-                            <li>Del Campo</li>
-                        </ul>
-                        <button class="card__btn">
-                            <label for="card-check2">Ver Mas</label>
-                        </button>
-                    </div>
-                </div>
-                <div class="cards__card flex-col-spcBtwn">
-                    <div class="card__img">
-                        <img src="images/imagen-card-3.webp" alt="">
-                    </div>
-                    <div class="card__options flex-col-spcBtwn">
-                        <h3>Dulces Tentaciones</h3>
-                        <ul class="flex-col-spcEvly">
-                            <li>Dulces en Bandejeo</li>
-                            <li>Mesa Dulce</li>
-                        </ul>
-                        <button class="card__btn">
-                            <label for="card-check3">Ver Mas</label>
-                        </button>
-                    </div>
-                </div>
-                <div class="cards__card flex-col-spcBtwn">
-                    <div class="card__img">
-                        <img src="images/imagen-card-4.webp" alt="">
-                    </div>
-                    <div class="card__options flex-col-spcBtwn">
-                        <h3>Opciones de Tres Pasos</h3>
-                        <ul class="flex-col-spcEvly">
-                            <li>Entrada</li>
-                            <li>Principal</li>
-                            <li>Postre</li>
-                        </ul>
-                        <button class="card__btn">
-                            <label for="card-check4">Ver Mas</label>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="catering__modal">
-                <label for="card-check" class="close-menu-tchScreen modal-close1" aria-hidden="true"></label>
-                <label for="card-check2" class="close-menu-tchScreen modal-close2" aria-hidden="true"></label>
-                <label for="card-check3" class="close-menu-tchScreen modal-close3" aria-hidden="true"></label>
-                <label for="card-check4" class="close-menu-tchScreen modal-close4" aria-hidden="true"></label>
-                <div class="modal__card-modal">
-                    <input type="checkbox" id="card-check" class="card-check">
-                    <label for="card-check">
-                        <span class="material-symbols-outlined close-menu close-modal">close_small</span>
-                    </label>
+        <section class="menu section">
+            <h2 class="section-title">Nuestro Menu</h2>
+            <div class="menu__cards">
+                <div class="cards__card menu-card">
                     <h3>Opciones Cocktail</h3>
-                    <div class="card-modal__options">
-                        <div class="options__option">
-                            <h4>Pinchos</h4>
-                            <ul>
-                                <li>Capresse(Tomate Cherry, Albahaca y Queso Boconccino)</li>
-                                <li>Agujitas de Pollo Crocante y Sesamo</li>
-                                <li>Calabresa Crocante (Masa Philo, Papa, Salame Tandilero y Verdeo)</li>
-                                <li>Riñoncitos de Cordero y Panceta</li>
-                                <li>Melon, Jamon Serrano y Tomates Secos</li>
-                                <li>Champignon Relleno Crocante y Amapola</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Brusquetas</h4>
-                            <ul>
-                                <li>Mix de Hongos</li>
-                                <li>Pesto de Tomates Secos y Jamon Crudo</li>
-                                <li>Revuelto de Salmon Ahumado, Caviar y Eneldo</li>
-                                <li>Integral con Verduras Asadas, Sesamo y Queso Brie</li>
-                                <li>Guacamole, Nacho y Jalapeño</li>
-                                <li>Tartare de Salmon Rosado</li>
-                                <li>Gazpacho, Crouton y Vieyra</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Finger Foods</h4>
-                            <ul>
-                                <li>Polenta Crocante, Mostarda de Peras y Morcilla</li>
-                                <li>Persianas de Hojaldre, Salmon Ahumado y Mostaza Antigua</li>
-                                <li>Langostinos Rebozados y Coco</li>
-                                <li>Empanaditas Crocantes de Cordero</li>
-                                <li>Sandwichs Clasicos (Pan de Miga)</li>
-                                <li>Jamon Crudo y Rucula</li>
-                                <li>Roquefort, Cognac y Nuez</li>
-                                <li>Duxele de Hongos y Queso Feta</li>
-                                <li>Sandwichs Artesanales (En Pan de Leche y Especias)</li>
-                                <li>Salmon Ahumado, Crema de Eneldo y Pepinillos</li>
-                                <li>Jamon Crudo y Tapenade</li>
-                                <li>Verduras Grilladas en Pan Negro y Crema Roquefort</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="modal__btn flex-row-cnt">
-                        <button>
-                            <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Opciones%20Cocktail%20del%20servicio%20de%20Catering%20de%20MEG.
-                            " target="_blank">Reservar</a>
-                        </button>
-                    </div>
+                    <ul class="card__options">
+                        <li class="options__option">Pinchos</li>
+                        <li class="options__option">Brusquetas</li>
+                        <li class="options__option">Finger Foods</li>
+                    </ul>
+                    <input type="checkbox" id="show-modal1" class="show-modal">
+                    <button>
+                        <label for="show-modal1" class="card__btn">Ver todas las opciones</label>
+                    </button>
                 </div>
-                <div class="modal__card-modal">
-                    <input type="checkbox" id="card-check2" class="card-check">
-                    <label for="card-check2">
-                        <span class="material-symbols-outlined close-menu close-modal">close_small</span>
-                    </label>
+                <div class="cards__card menu-card">
                     <h3>Islas Tematicas</h3>
-                    <div class="card-modal__options">
-                        <div class="options__option">
-                            <h4>Mexicana</h4>
-                            <ul>
-                                <li>Quesadillas</li>
-                                <li>Tacos de Carne</li>
-                                <li>Tacos de Pollo</li>
-                                <li>Ensaladas Rancheras</li>
-                                <li>Ensalada de Guacamole</li>
-                                <li>Nachos con Cheddar</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Italiana</h4>
-                            <ul>
-                                <li>Risotto al Funghi</li>
-                                <li>Risotto de Mar</li>
-                                <li>Noquis Artesanales</li>
-                                <li>Penne Rigatti (de Cecco)</li>
-                                <li>Ravioles de Elaboracion Propia</li>
-                                <li>Salsa 4 Quesos</li>
-                                <li>Salsa de Tomate Fresco y Albahaca</li>
-                                <li>Salsa Mediterranea (Tomate Concasse, Tomates Secos, Olivas Negras, Alcaparras y Anchoas)</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Oriental</h4>
-                            <ul>
-                                <li>Espejo de Sushi</li>
-                                <li>Chop Suey de Pollo</li>
-                                <li>Chow Fan de Verduras</li>
-                                <li>Empanaditas Crocantes de Res</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Del Mar</h4>
-                            <ul>
-                                <li>Paella de Mariscos</li>
-                                <li>Arroz con Calamares</li>
-                                <li>Ostras Gratinadas</li>
-                                <li>Mejillones Margarita</li>
-                                <li>Pulpo a la Gallega</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Del Campo</h4>
-                            <ul>
-                                <li>Pata de Jamon Serrano Fileteado a la Vista</li>
-                                <li>Los Mejores Quesos y Embutidos Seleccionados</li>
-                                <li>Pata de Ternera</li>
-                                <li>Pata de Cerdo</li>
-                                <li>Panes Caseros Artesanales</li>
-                                <li>Criolla</li>
-                                <li>Empanadas de Carne</li>
-                                <li>Empanada de Humita</li>
-                                <li>Locro</li>
-                                <li>Crabonada</li>
-                                <li>Estofado de Cordero</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="modal__btn flex-row-cnt">
-                        <button>
-                            <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Islas%20Temáticas%20del%20servicio%20de%20Catering%20de%20MEG.
-                            " target="_blank">Reservar</a>
-                        </button>
-                    </div>
+                    <ul class="card__options">
+                        <li class="options__option">Mexicana</li>
+                        <li class="options__option">Italiana</li>
+                        <li class="options__option">Del Mar</li>
+                    </ul>
+                    <input type="checkbox" id="show-modal2" class="show-modal">
+                    <button>
+                        <label for="show-modal2" class="card__btn">Ver todas las opciones</label>
+                    </button>
                 </div>
-                <div class="modal__card-modal">
-                    <input type="checkbox" id="card-check3" class="card-check">
-                    <label for="card-check3">
-                        <span class="material-symbols-outlined close-menu close-modal">close_small</span>
-                    </label>
+                <div class="cards__card menu-card">
                     <h3>Dulces Tentaciones</h3>
-                    <div class="card-modal__options">
-                        <div class="options__option">
-                            <h4>Dulces en Bandejeo</h4>
-                            <ul>
-                                <li>Mini Lemon Pie</li>
-                                <li>Mini Torta Brownie</li>
-                                <li>Tiramisu</li>
-                                <li>Shot de Mousse de Dulce de Leche y Cafe</li>
-                                <li>Arroz con Leche, Escarchada de Naranjas y Crema de Canela</li>
-                                <li>Pincho de Frutilla, Menta y Chocolate</li>
-                                <li>Pincho Crocante de Manzana y Masa Philo</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Mesa Dulce</h4>
-                            <ul>
-                                <li>Torta Brownie</li>
-                                <li>Tarta de Frutillas</li>
-                                <li>Torta Rogel</li>
-                                <li>Cheesecake de Naranja</li>
-                                <li>Marquise de Chocolate y Frutos Rojos</li>
-                                <li>Genoise de Chocolate, Crema de Limon y Menta</li>
-                            </ul>
-                        </div>
+                    <ul class="card__options">
+                        <li class="options__option">Dulces en Bandejeo</li>
+                        <li class="options__option">Mesa Dulce</li>
+                    </ul>
+                    <input type="checkbox" id="show-modal3" class="show-modal">
+                    <button>
+                        <label for="show-modal3" class="card__btn">Ver todas las opciones</label>
+                    </button>
+                </div>
+                <div class="cards__card menu-card">
+                    <h3>Opciones de Tres Pasos</h3>
+                    <ul class="card__options">
+                        <li class="options__option">Entrada</li>
+                        <li class="options__option">Principal</li>
+                        <li class="options__option">Postre</li>
+                    </ul>
+                    <input type="checkbox" id="show-modal4" class="show-modal">
+                    <button>
+                        <label for="show-modal4" class="card__btn">Ver todas las opciones</label>
+                    </button>
+                </div>
+            </div>
+            <div class="menu__modal-section">
+                <div class="cards__card menu-card modal-card card1">
+                    <label for="show-modal1" class="touchScreenToClose"></label>
+                    <div class="modal-card__header">
+                        <label for="show-modal1">
+                            <i class="fa-solid fa-xmark close-modal"></i>
+                        </label>
+                        <h3>Opciones Cocktail</h3>
                     </div>
-                    <div class="modal__btn flex-row-cnt">
-                        <button>
-                            <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Dulces%20Tentaciones%20del%20servicio%20de%20Catering%20de%20MEG.
-                            " target="_blank">Reservar</a>
-                        </button>
+                    <div class="modal-card__section">
+                        <h4>Pinchos</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Capresse(Tomate Cherry, Albahaca y Queso Boconccino)</li>
+                            <li class="options__option">Agujitas de Pollo Crocante y Sesamo</li>
+                            <li class="options__option">Calabresa Crocante (Masa Philo, Papa, Salame Tandilero y Verdeo)</li>
+                            <li class="options__option">Riñoncitos de Cordero y Panceta</li>
+                            <li class="options__option">Melon, Jamon Serrano y Tomates Secos</li>
+                            <li class="options__option">Champignon Relleno Crocante y Amapola</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Brusquetas</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Mix de Hongos</li>
+                            <li class="options__option">Pesto de Tomates Secos y Jamon Crudo</li>
+                            <li class="options__option">Revuelto de Salmon Ahumado, Caviar y Eneldo</li>
+                            <li class="options__option">Integral con Verduras Asadas, Sesamo y Queso Brie</li>
+                            <li class="options__option">Guacamole, Nacho y Jalapeño</li>
+                            <li class="options__option">Tartare de Salmon Rosado</li>
+                            <li class="options__option">Gazpacho, Crouton y Vieyra</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Finger Foods</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Polenta Crocante, Mostarda de Peras y Morcilla</li>
+                            <li class="options__option">Persianas de Hojaldre, Salmon Ahumado y Mostaza Antigua</li>
+                            <li class="options__option">Langostinos Rebozados y Coco</li>
+                            <li class="options__option">Empanaditas Crocantes de Cordero</li>
+                            <li class="options__option">Sandwichs Clasicos (Pan de Miga)</li>
+                            <li class="options__option">Jamon Crudo y Rucula</li>
+                            <li class="options__option">Roquefort, Cognac y Nuez</li>
+                            <li class="options__option">Duxele de Hongos y Queso Feta</li>
+                            <li class="options__option">Sandwichs Artesanales (En Pan de Leche y Especias)</li>
+                            <li class="options__option">Salmon Ahumado, Crema de Eneldo y Pepinillos</li>
+                            <li class="options__option">Jamon Crudo y Tapenade</li>
+                            <li class="options__option">Verduras Grilladas en Pan Negro y Crema Roquefort</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__footer">
+                        <p>Todas nuestras opciones pueden personalizarse segun sus preferencias</p>
                     </div>
                 </div>
-                <div class="modal__card-modal">
-                    <input type="checkbox" id="card-check4" class="card-check">
-                    <label for="card-check4">
-                        <span class="material-symbols-outlined close-menu close-modal">close_small</span>
-                    </label>
-                    <h3>Opciones de Tres Pasos</h3>
-                    <div class="card-modal__options">
-                        <div class="options__option">
-                            <h4>Entrada</h4>
-                            <ul>
-                                <li>Sfoglia Arrollada con Jamon Crudo y Tomates Secos</li>
-                                <li>Terina de Pollo, Jamon Crudo y Mollejas</li>
-                                <li>Burrata con Salmon Ahumado, Tomates y Aceite Verde</li>
-                                <li>Brusqueta del Bosque (Toston de Pan de Campo con Seleccion de Hongos y Mousse de Perejil)</li>
-                                <li>Carpaccio de Lomo con Bouquet y Citricos</li>
-                                <li>Mollejas y Langostinos al Rhum</li>
-                                <li>Brie Frito, Higo confit y Fondue de Tomates</li>
-                                <li>Seleccion de Quesos y Fiambres con Verduras Grilladas</li>
-                                <li>Hongos Rellenos a la Florentina</li>
-                                <li>Crocante de Masa Philo con Jamon Serrano, Rucula y Tomates Secos</li>
-                                <li>Ensalada Capresse en tulipa de Queso Reggianito</li>
-                                <li>Voul Au Vent de Mollejas y Hongos</li>
-                                <li>Pato en Dos Texturas con Chutney de Mango</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Principal</h4>
-                            <ul>
-                                <li>Lomo a la Pimienta / Hongos con Mil Hojas de Papa</li>
-                                <li>Bondiola de Cerdo Laqueada con Pure de Batata y Jengibre</li>
-                                <li>Pollo Arrollado con Duxelle de Hongos sobre Papa Rosti y Salsa de Tomillo</li>
-                                <li>Salmon Rosado en Croustillade de Perejil sobre Verduras en Manteca de Kummel</li>
-                                <li>Jamoncito de Ave Relleno sobre Teja de Maiz y Queso de Cabra</li>
-                                <li>Petit Beef con Ratatouille y Sesamo</li>
-                                <li>Lomo Relleno con Panceta y Puerros sobre Saute de Cebollas y Hongos</li>
-                                <li>Lenguado al Roquefort con Galette de Espinacas</li>
-                                <li>Ojo de Bife Grille con Ensalada de Verdes, Roquefort y Almendras</li>
-                                <li>Suprema de Pollo Rellena con Jamon y Esparragos, Salsa de Oporto en Descanso de Pure Rustico</li>
-                            </ul>
-                        </div>
-                        <div class="options__option">
-                            <h4>Postre</h4>
-                            <ul>
-                                <li>Brownie Tibio con Helado de Americana</li>
-                                <li>Creme Brulee de Vainilla</li>
-                                <li>Marquise de Chocolate y Naranjas Confit</li>
-                                <li>Mousse de Sambayon con Frutos Rojos</li>
-                                <li>Mousse de Dulce de Leche y Cafe con Merengue Crocante</li>
-                                <li>Tiramisu</li>
-                                <li>Crumble de Manzana sobre Inglesa de Cardamomo</li>
-                                <li>Crocante de Masa Philo, Bananas Flambeadas y Frutos Secos</li>
-                                <li>Mini Tarta de Limon / Frutillas con Almibar de Menta</li>
-                                <li>Crepes de Dulce de Leche y Rhum, Salsa Inglesa y Ganache de Chocolate</li>
-                                <li>Copa de Frutos Rojos Flambeados con Crema Chantilly de Naranja</li>
-                            </ul>
-                        </div>
+                <div class="cards__card menu-card modal-card card2">
+                    <label for="show-modal2" class="touchScreenToClose"></label>
+                    <div class="modal-card__header">
+                        <label for="show-modal2">
+                            <i class="fa-solid fa-xmark close-modal"></i>
+                        </label>
+                        <h3>Islas Tematicas</h3>
                     </div>
-                    <div class="modal__btn flex-row-cnt">
-                        <button>
-                            <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20saber%20más%20información%20sobre%20las%20Opciones%20de%20Tres%20Pasos%20del%20servicio%20de%20Catering%20de%20MEG.
-                            " target="_blank">Reservar</a>
-                        </button>
+                    <div class="modal-card__section">
+                        <h4>Mexicana</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Quesadillas</li>
+                            <li class="options__option">Tacos de Carne</li>
+                            <li class="options__option">Tacos de Pollo</li>
+                            <li class="options__option">Ensaladas Rancheras</li>
+                            <li class="options__option">Ensalada de Guacamole</li>
+                            <li class="options__option">Nachos con Cheddar</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Italiana</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Risotto al Funghi</li>
+                            <li class="options__option">Risotto de Mar</li>
+                            <li class="options__option">Noquis Artesanales</li>
+                            <li class="options__option">Penne Rigatti (de Cecco)</li>
+                            <li class="options__option">Ravioles de Elaboracion Propia</li>
+                            <li class="options__option">Salsa 4 Quesos</li>
+                            <li class="options__option">Salsa de Tomate Fresco y Albahaca</li>
+                            <li class="options__option">Salsa Mediterranea (Tomate Concasse, Tomates Secos, Olivas Negras, Alcaparras y Anchoas)</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Oriental</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Espejo de Sushi</li>
+                            <li class="options__option">Chop Suey de Pollo</li>
+                            <li class="options__option">Chow Fan de Verduras</li>
+                            <li class="options__option">Empanaditas Crocantes de Res</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Del Mar</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Paella de Mariscos</li>
+                            <li class="options__option">Arroz con Calamares</li>
+                            <li class="options__option">Ostras Gratinadas</li>
+                            <li class="options__option">Mejillones Margarita</li>
+                            <li class="options__option">Pulpo a la Gallega</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Del Campo</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Pata de Jamon Serrano Fileteado a la Vista</li>
+                            <li class="options__option">Los Mejores Quesos y Embutidos Seleccionados</li>
+                            <li class="options__option">Pata de Ternera</li>
+                            <li class="options__option">Pata de Cerdo</li>
+                            <li class="options__option">Panes Caseros Artesanales</li>
+                            <li class="options__option">Criolla</li>
+                            <li class="options__option">Empanadas de Carne</li>
+                            <li class="options__option">Empanada de Humita</li>
+                            <li class="options__option">Locro</li>
+                            <li class="options__option">Carbonada</li>
+                            <li class="options__option">Estofado de Cordero</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__footer">
+                        <p>Todas nuestras opciones pueden personalizarse segun sus preferencias</p>
+                    </div>
+                </div>
+                <div class="cards__card menu-card modal-card card3">
+                    <label for="show-modal3" class="touchScreenToClose"></label>
+                    <div class="modal-card__header">
+                        <label for="show-modal3">
+                            <i class="fa-solid fa-xmark close-modal"></i>
+                        </label>
+                        <h3>Dulces Tentaciones</h3>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Dulces en Bandejeo</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Mini Lemon Pie</li>
+                            <li class="options__option">Mini Torta Brownie</li>
+                            <li class="options__option">Tiramisu</li>
+                            <li class="options__option">Shot de Mousse de Dulce de Leche y Cafe</li>
+                            <li class="options__option">Arroz con Leche, Escarchada de Naranjas y Crema de Canela</li>
+                            <li class="options__option">Pincho de Frutilla, Menta y Chocolate</li>
+                            <li class="options__option">Pincho Crocante de Manzana y Masa Philo</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Mesa Dulce</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Torta Brownie</li>
+                            <li class="options__option">Tarta de Frutillas</li>
+                            <li class="options__option">Torta Rogel</li>
+                            <li class="options__option">Cheesecake de Naranja</li>
+                            <li class="options__option">Marquise de Chocolate y Frutos Rojos</li>
+                            <li class="options__option">Genoise de Chocolate, Crema de Limon y Menta</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__footer">
+                        <p>Todas nuestras opciones pueden personalizarse segun sus preferencias</p>
+                    </div>
+                </div>
+                <div class="cards__card menu-card modal-card card4">
+                    <label for="show-modal4" class="touchScreenToClose"></label>
+                    <div class="modal-card__header">
+                        <label for="show-modal4">
+                            <i class="fa-solid fa-xmark close-modal"></i>
+                        </label>
+                        <h3>Opciones de Tres Pasos</h3>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Entrada</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Sfoglia Arrollada con Jamon Crudo y Tomates Secos</li>
+                            <li class="options__option">Terina de Pollo, Jamon Crudo y Mollejas</li>
+                            <li class="options__option">Burrata con Salmon Ahumado, Tomates y Aceite Verde</li>
+                            <li class="options__option">Brusqueta del Bosque (Toston de Pan de Campo con Seleccion de Hongos y Mousse de Perejil)</li>
+                            <li class="options__option">Carpaccio de Lomo con Bouquet y Citricos</li>
+                            <li class="options__option">Mollejas y Langostinos al Rhum</li>
+                            <li class="options__option">Brie Frito, Higo confit y Fondue de Tomates</li>
+                            <li class="options__option">Seleccion de Quesos y Fiambres con Verduras Grilladas</li>
+                            <li class="options__option">Hongos Rellenos a la Florentina</li>
+                            <li class="options__option">Crocante de Masa Philo con Jamon Serrano, Rucula y Tomates Secos</li>
+                            <li class="options__option">Ensalada Capresse en tulipa de Queso Reggianito</li>
+                            <li class="options__option">Voul Au Vent de Mollejas y Hongos</li>
+                            <li class="options__option">Pato en Dos Texturas con Chutney de Mango</li>
+                        
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Principal</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Lomo a la Pimienta / Hongos con Mil Hojas de Papa</li>
+                            <li class="options__option">Bondiola de Cerdo Laqueada con Pure de Batata y Jengibre</li>
+                            <li class="options__option">Pollo Arrollado con Duxelle de Hongos sobre Papa Rosti y Salsa de Tomillo</li>
+                            <li class="options__option">Salmon Rosado en Croustillade de Perejil sobre Verduras en Manteca de Kummel</li>
+                            <li class="options__option">Jamoncito de Ave Relleno sobre Teja de Maiz y Queso de Cabra</li>
+                            <li class="options__option">Petit Beef con Ratatouille y Sesamo</li>
+                            <li class="options__option">Lomo Relleno con Panceta y Puerros sobre Saute de Cebollas y Hongos</li>
+                            <li class="options__option">Lenguado al Roquefort con Galette de Espinacas</li>
+                            <li class="options__option">Ojo de Bife Grille con Ensalada de Verdes, Roquefort y Almendras</li>
+                            <li class="options__option">Suprema de Pollo Rellena con Jamon y Esparragos, Salsa de Oporto en Descanso de Pure Rustico</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__section">
+                        <h4>Postre</h4>
+                        <ul class="card__options">
+                            <li class="options__option">Brownie Tibio con Helado de Americana</li>
+                            <li class="options__option">Creme Brulee de Vainilla</li>
+                            <li class="options__option">Marquise de Chocolate y Naranjas Confit</li>
+                            <li class="options__option">Mousse de Sambayon con Frutos Rojos</li>
+                            <li class="options__option">Mousse de Dulce de Leche y Cafe con Merengue Crocante</li>
+                            <li class="options__option">Tiramisu</li>
+                            <li class="options__option">Crumble de Manzana sobre Inglesa de Cardamomo</li>
+                            <li class="options__option">Crocante de Masa Philo, Bananas Flambeadas y Frutos Secos</li>
+                            <li class="options__option">Mini Tarta de Limon / Frutillas con Almibar de Menta</li>
+                            <li class="options__option">Crepes de Dulce de Leche y Rhum, Salsa Inglesa y Ganache de Chocolate</li>
+                            <li class="options__option">Copa de Frutos Rojos Flambeados con Crema Chantilly de Naranja</li>
+                        </ul>
+                    </div>
+                    <div class="modal-card__footer">
+                        <p>Todas nuestras opciones pueden personalizarse segun sus preferencias</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="contact">
-            <a href="https://wa.me/5491153262021?text=Hola!%20Quería%20consultar%20por%20el%20servicio%20de%20Catering%20que%20brindan%20en%20MEG.
-                " target="blank" class="contact__logo" aria-label="WhatsApp de MEG">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
         </section>
     </main>
-    <footer class="flex-row-cnt">
-        <p>MEG - Eventos Gastronomicos</p>
-        <a href="https://www.instagram.com/megeventosgastronomicos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram de MEG">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100054438792548&sk=about" target="_blank" aria-label="Facebook de MEG">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-    </footer>
 </body>
 </html>
