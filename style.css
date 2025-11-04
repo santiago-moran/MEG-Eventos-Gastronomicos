@@ -6,6 +6,10 @@
 html {
     scroll-behavior: smooth;
 }
+body {
+    animation: visibility 1 .5s;
+    overflow-x: hidden;
+}
 * {
     padding: 0;
     margin: 0;
@@ -13,13 +17,16 @@ html {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 13px;
+    font-size: clamp(13px, 3vw, 16px);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
+    font-size: clamp(18px, 3vw, 20px);
 }
 h3, h4 {
     font-size: 15px;
+    font-size: clamp(15px, 3vw, 18px);
 }
 img {
     width: 100%;
@@ -40,11 +47,32 @@ input[type="checkbox"] {
 .fa-solid {
     font-size: 20px;
 }
+.wpp-logo {
+    display: inline-block;
+    position: sticky;
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    bottom: 20px;
+    color: var(--principal-color);
+    margin-bottom: 20px;
+    z-index: 10;
+}
+.wpp-logo i {
+    translate: 60px;
+    font-size: 40px;
+    transform: rotate(180deg);
+    animation: show-logo 1 both;
+    animation-timeline: scroll();
+    animation-range-start: 5%;
+    animation-range-end: 15%;
+}
 
 /*--- NAVBAR ---*/
 
 .navBar {
     padding: 10px 20px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +81,11 @@ input[type="checkbox"] {
     top: 0;
     background-color: var(--background-color);
     z-index: 10;
-    box-shadow: 0 0 3px;
+    box-shadow: 0 0 2px #999;
+    animation: compact 1 both;
+    animation-timeline: scroll();
+    animation-range-start: 5%;
+    animation-range-end: 10%;
 }
 .navBar__logo a {
     height: 30px;
@@ -102,8 +134,8 @@ input[type="checkbox"] {
 /*--- HOME ---*/
 
 .home {
-    height: calc(100vh - 54px);
-    background-image: radial-gradient(#0008), url(images/imagen-fondo.jpg);
+    min-height: 100vh;
+    background-image: radial-gradient(#0008), url(images/imagen-fondo.webp);
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--background-color);
@@ -111,9 +143,8 @@ input[type="checkbox"] {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
+    padding: 80px 20px 0 20px;
     text-align: center;
-    margin-top: 54px;
 }
 .home p {
     margin-top: 20px;
@@ -139,7 +170,7 @@ input[type="checkbox"] {
 /*--- SERVICES ---*/
 
 .section {
-    padding: 54px 20px 20px 20px;
+    padding: 90px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,23 +194,37 @@ input[type="checkbox"] {
 .section-description {
     margin-top: 25px;
 }
+.services__images {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
 .services__images, .services__cards {
     margin-top: 20px;
 }
 .images__image {
     width: 100%;
+    max-width: 600px;
     height: 300px;
-    margin-top: 30px;
+    margin: 25px;
 }
 .services__cards, .menu__cards {
     width: 100%;
 }
+.services__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .cards__card {
     margin-top: 30px;
     border: solid 1px #ddd;
-    padding: 25px;
+    padding: 40px 25px;
     text-align: left;
     width: 100%;
+    max-width: 400px;
+    margin: 20px;
 }
 .card__description {
     margin-top: 15px;
@@ -187,11 +232,18 @@ input[type="checkbox"] {
 
 /*--- MENU ---*/
 
+.menu__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
 .menu-card {
     min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 20px;
 }
 .options__option {
     margin-top: 15px;
@@ -236,6 +288,7 @@ input[type="checkbox"] {
     opacity: 0;
     pointer-events: none;
     transition: opacity .5s;
+    z-index: 10;
 }
 .touchScreenToClose {
     background-color: #0009;
@@ -322,7 +375,8 @@ input[type="checkbox"] {
 /*--- ABOUT ---*/
 
 .about {
-    background-color: #eee7;
+    background-color: #eee4;
+    padding: 90px 10% 20px 10%;
 }
 .about .section-description {
     text-align: left;
@@ -338,6 +392,7 @@ input[type="checkbox"] {
 }
 .experience__box {
     width: 100%;
+    max-width: 200px;
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -357,7 +412,7 @@ form {
     flex-direction: column;
     width: 100%;
     max-width: 500px;
-    margin-top: 45px;
+    margin: 45px 0;
 }
 form h3 {
     text-align: left;
@@ -450,4 +505,51 @@ footer > p:nth-of-type(1) {
     opacity: .7;
 }
 
+/*--- MEDIA QUERIES ---*/
 
+@media screen and (min-width: 1024px) {
+    .navBar {
+        overflow: hidden;
+    }
+    .menu__open-menu {
+        display: none;
+    }
+    .menu__items {
+    position: static;
+    list-style: none;
+    background-color: transparent;
+    width: auto;
+    border-top: none;
+    max-height: none;
+    overflow: auto;
+    transition: none;
+    display: flex;
+    }
+}
+@media screen and (min-width: 1340px) {
+    .images__image {
+        height: 500px;
+    }
+}
+
+/*--- ANIMATION ---*/
+
+@keyframes visibility {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes compact {
+    to {
+        height: 40px;
+    }
+}
+@keyframes show-logo {
+    to {
+        transform: rotate(360deg);
+        translate: 0;
+    }
+}
