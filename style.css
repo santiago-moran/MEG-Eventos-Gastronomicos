@@ -47,26 +47,6 @@ input[type="checkbox"] {
 .fa-solid {
     font-size: 20px;
 }
-.wpp-logo {
-    display: inline-block;
-    position: sticky;
-    width: 100%;
-    text-align: right;
-    padding-right: 20px;
-    bottom: 20px;
-    color: var(--principal-color);
-    margin-bottom: 20px;
-    z-index: 10;
-}
-.wpp-logo i {
-    translate: 60px;
-    font-size: 40px;
-    transform: rotate(180deg);
-    animation: show-logo 1 both;
-    animation-timeline: scroll();
-    animation-range-start: 5%;
-    animation-range-end: 15%;
-}
 
 /*--- NAVBAR ---*/
 
@@ -545,11 +525,5 @@ footer > p:nth-of-type(1) {
 @keyframes compact {
     to {
         height: 40px;
-    }
-}
-@keyframes show-logo {
-    to {
-        transform: rotate(360deg);
-        translate: 0;
     }
 }
