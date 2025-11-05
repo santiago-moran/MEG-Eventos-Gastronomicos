@@ -475,7 +475,7 @@ footer > p:nth-of-type(1) {
     margin-top: 10px;
 }
 .info-item {
-    margin-top: 25px;
+    margin: 25px;
 }
 .info-item a {
     margin-top: 5px;
@@ -487,6 +487,12 @@ footer > p:nth-of-type(1) {
 
 /*--- MEDIA QUERIES ---*/
 
+@media screen and (min-width: 760px) {
+    .contact-info > div{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
 @media screen and (min-width: 1024px) {
     .navBar {
         overflow: hidden;
